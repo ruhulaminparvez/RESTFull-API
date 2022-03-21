@@ -21,12 +21,14 @@ from rest_framework import viewsets
 
 
 #Viewset, GenericViewSet, ModelViewSet
-# class ArticleViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, mixins.DestroyModelMixin):
 class ArticleViewSet(viewsets.ModelViewSet):    
     serializer_class = ArticleSerializer
     queryset = Article.objects.all()
 
 
+# class ArticleViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, mixins.DestroyModelMixin):
+#     serializer_class = ArticleSerializer
+#     queryset = Article.objects.all()
 
     # def list(self, request):
     #     articles = Article.objects.all()
