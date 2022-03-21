@@ -20,8 +20,9 @@ from rest_framework import viewsets
 
 
 
-#Viewset
-class ArticleViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, mixins.DestroyModelMixin):
+#Viewset, GenericViewSet, ModelViewSet
+# class ArticleViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin, mixins.RetrieveModelMixin, mixins.DestroyModelMixin):
+class ArticleViewSet(viewsets.ModelViewSet):    
     serializer_class = ArticleSerializer
     queryset = Article.objects.all()
 
